@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // GitHub Pages 404 redirect workaround
+        // Ohjaa kaikki 404 virheet takaisin index.html:ään parametreineen
+        const currentUrl = window.location.href;
+        const baseUrl = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/';
+        const redirectUrl = baseUrl + 'index.html' + window.location.search + window.location.hash;
+        
+        console.log('404 redirect from:', currentUrl);
+        console.log('Redirecting to:', redirectUrl);
+        
+        window.location.replace(redirectUrl);
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
