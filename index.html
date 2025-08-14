@@ -6,9 +6,26 @@
         <script src="/script.js"></script>
     </head>
     <body>
-        
+    <div id="loading">Ladataan...</div>
+    <div id="error" style="display:none;"></div>
+    <div id="success" style="display:none;"></div>
+    <div id="debug" style="margin-top:20px; padding:10px; background:#f5f5f5;">
+      <h3>Debug info:</h3>
+      <p>Current URL: <span id="currentUrl"></span></p>
+      <p>Search params: <span id="searchParams"></span></p>
+      <p>Hash: <span id="hashInfo"></span></p>
+    </div>
+
+    <script>
+      // Debug info
+      document.getElementById('currentUrl').textContent = window.location.href;
+      document.getElementById('searchParams').textContent = window.location.search;
+      document.getElementById('hashInfo').textContent = window.location.hash;
+    </script>        
     <h1>Display your Spotify profile data</h1>
 
+
+    
   <section id="profile">
     <h2>Logged in as <span id="displayName"></span></h2>
     <span id="avatar"></span>
